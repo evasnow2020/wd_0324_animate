@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      #objetivo {
+        background-color: yellow;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      var x;
+      x = $(document);
+      x.ready(iniciar);
+      function iniciar() {
+        var x;
+        x = $("#animar");
+        x.click(animar);
+      }
+      function animar() {
+        var x;
+        x = $("#objetivo");
+        x.animate(
+          {
+            height: "300px",
+          },
+          "slow"
+        );
+        x.animate(
+          {
+            width: "300px",
+          },
+          "fast"
+        );
+        x.animate(
+          {
+            height: "100px;",
+          },
+          "normal"
+        );
+        x.animate(
+          {
+            width: "100px",
+          },
+          3000
+        );
+      }
+    </script>
+  </head>
+  <body>
+    <input type="button" id="animar" value="Animar" />
+    <div id="objetivo">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, amet
+      dignissimos ducimus porro blanditiis reprehenderit nisi. Pariatur, placeat
+      itaque laudantium ducimus repellendus consectetur distinctio inventore
+      quos. Excepturi similique consequuntur quam?
+    </div>
+  </body>
+</html>
